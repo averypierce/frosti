@@ -1,29 +1,7 @@
-# frosti
-Freezer-Ready Optimal Sustained Temperature Indicator
+# Frosti
+### Freezer-Ready Optimal Sustained Temperature Indicator
 
-5/9/2016
-  Added the Read Module source files. Currently, a test script would be like;
-  
-    import temp.py
-    
-    read.gpio_init()
-    temp.thermistor_init()
-    temp.calc_temp()
-  
-  The temperature calculation currently just prints out the values of each thermistor. Can easily be modded to return the list of thermistor objects to use as the Driver pleases. 
+Frosti is a Raspberry Pi based monitoring and alarm system for WWU Neuroscience Department’s industrial -80°C freezers that sends SMS or email alerts if temperatures rise to levels unsafe for specimens. 
+![Image of Yaktocat](https://raw.githubusercontent.com/averypierce/frosti/master/images/outside.jpg)
 
-5/10/2016
-  Added the Logger Module source files.
-
-5/14/2016
-  Added the new Freezer object for use in the Reader Module. A new test script for getting the average temperature for freezer #2 of 3 would be something like:
-    
-    import temp.py
-    
-    read.gpi_init()
-    temp.freezers_init()
-    temp.thermistors_init()
-    temp = temp.calc_temp(1)
-    print("Average temp for freezer 1: %.2f C\n" % temp)
-    
-    
+![Image of Yaktocat](https://raw.githubusercontent.com/averypierce/frosti/master/images/inside.jpg)
